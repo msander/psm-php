@@ -19,3 +19,4 @@ RUN echo 'de_DE.UTF-8 UTF-8' >> /etc/locale.gen && \
   locale-gen
 
 COPY uploads.ini /usr/local/etc/php/conf.d/
+COPY disfuncs.ini /usr/local/etc/php/conf.d/
