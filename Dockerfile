@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install iconv mcrypt \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install gd
-RUN docker-php-ext-install mbstring mysqli zip opcache
+RUN docker-php-ext-install mbstring mysqli zip
 RUN pecl install apcu
 RUN apt-get install -y locales
 RUN dpkg-reconfigure locales && \
